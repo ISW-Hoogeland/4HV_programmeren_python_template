@@ -4,27 +4,14 @@
 	"name": "programmeren-python",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/universal:latest",
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "pip install -r requirements.txt || true",
 	// Configure tool-specific properties.
-    "forwardPorts": [],
-
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-python.python",         // Python taalondersteuning
-                "ms-python.vscode-pylance", // Intellisense & type checks
-                "ms-vscode.livepreview",    // Voor HTML / live preview
-                "esbenp.prettier-vscode",   // Formatter (HTML/CSS/JS)
-                "mhutchie.git-graph"        // Visualisatie Git commits/branches
-            ],
-            "settings": {
-                "python.defaultInterpreterPath": "/usr/local/bin/python",
-                "python.analysis.typeCheckingMode": "basic",
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
-                "editor.formatOnSave": true
-            }
-        }
-    }
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"extensions": [
+				"mhutchie.git-graph", // add graphical viewer for branches and commits, click on button in Source-Code tab
+				"ms-python.python" // add common functionallity for python (syntax checking, autocomplete, debugging etc)
+			]
+		}
+	}
 }
